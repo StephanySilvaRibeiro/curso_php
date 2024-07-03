@@ -40,11 +40,11 @@ if ($resultado != ""){
     echo "A operação escolhida foi $operacao com os valores $valorA e $valorB e o resultado obtido é $resultado.";
     echo "<br>";
 }
-
+echo "<br>";
 //Testa se a pessoa pode fazer a carteira de motorista.
 // Precisa ser maior de 18 anos e ter mais de R$ 1.000,00.
 $idadePessoa = 18;
-$dinheiroNaCarteira = 30;
+$dinheiroNaCarteira = 1000;
 
 if($idadePessoa >= 18 && $dinheiroNaCarteira >= 1000){
     echo "Parabéns, você pode fazer a carteira de motorista!";
