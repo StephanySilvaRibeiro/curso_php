@@ -80,6 +80,15 @@ echo "A soma dos números é: " . $soma . "<br>"; // 5050
 /*
 
 $resto = $i % 2;
+ 
+if ($resto ==0){
 
+echo $i . "<br>";
+
+} else {
+
+   impares
+
+}
 
 */
