@@ -92,3 +92,33 @@ echo $i . "<br>";
 }
 
 */
+
+
+echo "SOMA DOS NÚMEROS";
+echo "<br>";
+echo "<br>";
+
+$somaPares = 0;
+$somaImpares = 0;
+$i = 0;
+
+
+while ($i <= 100) {
+
+    if ($i % 2 == 0) {
+
+        $somaPares = $somaPares + $i;
+
+    } else {
+
+        $somaImpares = $somaImpares + $i;
+
+    }
+
+    $i++;
+
+}
+
+echo "Soma dos números pares de 0 a 100: $somaPares";
+echo "<br>";
+echo "Soma dos números ímpares de 0 a 100: $somaImpares";
