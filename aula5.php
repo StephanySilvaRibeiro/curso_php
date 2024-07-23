@@ -3,7 +3,7 @@
 // Recriar exercicio da tabuada (Aula 04) com os laços WHILE e DO-WHILE.
 
 /*
-$numero = 8;
+$numero = 5;
 $i = 0;
 
 echo "TABUADA";
@@ -37,6 +37,8 @@ for ($i = 2; $i <= 20; $i = $i+2){
     
 }
 */
+
+
 
 /*
 $i = 2;
@@ -76,22 +78,6 @@ echo "A soma dos números é: " . $soma . "<br>"; // 5050
 
 
 // Somar todos os números PARES e IMPARES de 0 à 100 utilizando o laço de repetição WHILE, depois mostre o resultado da soma.
-
-/*
-
-$resto = $i % 2;
- 
-if ($resto ==0){
-
-echo $i . "<br>";
-
-} else {
-
-   impares
-
-}
-
-*/
 
 
 echo "SOMA DOS NÚMEROS";
