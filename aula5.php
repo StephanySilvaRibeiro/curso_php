@@ -19,7 +19,7 @@ while($i <= 10){
 }
 */
 
-
+//-------------------------------------------------------------------------
 
 // Calcular / Iterar os números pares de 2 até 20 utilizando os laços WHILE e FOR.
 
@@ -39,6 +39,7 @@ for ($i = 2; $i <= 20; $i = $i+2){
 */
 
 
+//-------------------------------------------------------------------------
 
 /*
 $i = 2;
@@ -52,7 +53,7 @@ while($i <= 20){
 }
 */
 
-
+//-------------------------------------------------------------------------
 
 // Somar todos os números de 0 à 100 utilizando o laço de repetição WHILE, depois mostre o resultado da soma.
 
@@ -75,7 +76,7 @@ while($i <= 100){
 echo "A soma dos números é: " . $soma . "<br>"; // 5050
 */
 
-
+//-------------------------------------------------------------------------
 
 // Somar todos os números PARES e IMPARES de 0 à 100 utilizando o laço de repetição WHILE, depois mostre o resultado da soma.
 
@@ -105,6 +106,10 @@ while ($i <= 100) {
 
 }
 
-echo "Soma dos números pares de 0 a 100: $somaPares";
+echo "Soma dos números PARES de 0 a 100: $somaPares";
 echo "<br>";
-echo "Soma dos números ímpares de 0 a 100: $somaImpares";
+echo "Soma dos números IMPARES de 0 a 100: $somaImpares";
+
+?>
+
+
