@@ -57,17 +57,37 @@ $tamanhoImpar = count($vetorImpar);
 // Colocar os números em ordem decrescente
 // Usar variaveis
 
-for($i = 0; $i < $tamanhoPar; $i++){
+echo "NÚMEROS PARES AO CONTRÁRIO: <br>";
 
+for($i = 100; $i >= 0; $i--){
+
+    if ($i % 2 == 0) {
+
+        $vetorPar[] = $i;
+        echo $i . "- ";
 
 }
-for($i = 0; $i < $tamanhoImpar; $i++){
-
 
 }
 
+echo "<br>";
+echo "<br>";
 
+echo "NÚMEROS IMPARES AO CONTRÁRIO: <br>";
 
+for($i = 100; $i >= 0; $i-- ){
+
+    if ($i % 2 != 0) {
+
+    $vetorImpar[] = $i;
+    echo $i . "- ";
+
+}
+
+}
+
+echo "<br>";
+echo "<br>";
 
 echo "NÚMEROS PARES: <br>";
 
