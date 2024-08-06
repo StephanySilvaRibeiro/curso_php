@@ -54,9 +54,46 @@ $tamanhoPar = count($vetorPar);
 $tamanhoImpar = count($vetorImpar);
 
 
+$vetorParContrario = [];
+$vetorImparContrario = [];
+
+for($numero = 100; $numero >= 0; $numero--){
+
+    if($numero % 2 == 0){
+
+        $vetorParContrario[] = $numero;
+
+    } else {
+
+        $vetorImparContrario[] = $numero;
+
+    }
+
+}
+
+echo "NÚMEROS PARES AO CONTRÁRIO: <br>";
+
+for($numero = 0; $numero <= count($vetorParContrario); $numero++){
+
+    echo $vetorParContrario[$numero] . "- ";
+
+}
+
+echo "<br>";
+echo "<br>";
+
+echo "NÚMEROS IMPARES AO CONTRÁRIO: <br>";
+
+for($numero = 0; $numero <= count($vetorImparContrario); $numero++){
+
+    echo $vetorImparContrario[$numero] . "- ";
+
+}
+
 // Colocar os números em ordem decrescente
 // Usar variaveis
 
+/*
 echo "NÚMEROS PARES AO CONTRÁRIO: <br>";
 
 for($i = 100; $i >= 0; $i--){
@@ -85,6 +122,8 @@ for($i = 100; $i >= 0; $i-- ){
 }
 
 }
+
+*/
 
 echo "<br>";
 echo "<br>";
