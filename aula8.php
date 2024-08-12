@@ -54,6 +54,35 @@ echo implode(", ", $vetorAlfa);
  Trinagulos a considerar: Equilatero, Isoceles ou escaleno.
 */ 
 
-$lado1 = 0;
-$lado2 = 0;
-$lado3 = 0;
+
+$lado1 = 4;
+$lado2 = 2;
+$lado3 = 5;
+
+function identificarTipoTriangulo($lado1, $lado2, $lado3) {
+
+    // Verifica se as medidas podem formar um triângulo
+    if (($lado1 + $lado2 > $lado3) && ($lado1 + $lado3 > $lado2) && ($lado2 + $lado3 > $lado1)) {
+
+        if ($lado1 == $lado2 && $lado2 == $lado3) {
+            return "Equilátero"; // Todos os três lados são iguais.
+
+        } elseif ($lado1 == $lado2 || $lado1 == $lado3 || $lado2 == $lado3) {
+            return "Isósceles"; // Dois lados são iguais.
+
+        } else {
+            return "Escaleno"; // Todos os lados são diferentes.
+
+        }
+    } else {
+
+        return "As medidas fornecidas não formam um triângulo válido.";
+        
+    }
+}
+
+
+$tipoTriangulo = identificarTipoTriangulo($lado1, $lado2, $lado3);
+
+echo "<br>";
+echo "O triângulo é do tipo: " . $tipoTriangulo;
