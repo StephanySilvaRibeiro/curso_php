@@ -51,14 +51,47 @@ echo implode(", ", $vetorAlfa);
  Com estas medidas efetuar o calculo e informar ao usuario qual o tipo
  de triangulo que é formado pelas medidas que ele passou.
  
- Trinagulos a considerar: Equilatero, Isoceles ou escaleno.
+ Triangulos a considerar: Equilatero, Isoceles ou Escaleno.
 */ 
 
 
-$lado1 = 4;
-$lado2 = 2;
-$lado3 = 5;
+$lado1 = 1;
+$lado2 = 0;
+$lado3 = 2;
 
+echo "<br>";
+echo "<br>";
+
+if ( $lado1 == $lado2 && $lado2 == $lado3 ){
+
+    echo "Equilátero"; // Todos os três lados são iguais.
+
+}elseif ($lado1 == $lado2 || $lado1 == $lado3 || $lado2 == $lado3){
+
+    echo "Isóceles"; // Dois lados são iguais.
+
+}elseif ($lado1 != $lado2 || $lado1 != $lado3 || $lado2 != $lado3){
+
+    echo "Escaleno"; // Todos os lados são diferentes.
+
+}else {
+
+    echo "As medidas fornecidas não formam um triângulo válido.";
+
+}
+
+
+
+
+
+
+
+
+
+
+
+
+/*
 function identificarTipoTriangulo($lado1, $lado2, $lado3) {
 
     // Verifica se as medidas podem formar um triângulo
@@ -86,3 +119,5 @@ $tipoTriangulo = identificarTipoTriangulo($lado1, $lado2, $lado3);
 
 echo "<br>";
 echo "O triângulo é do tipo: " . $tipoTriangulo;
+
+*/
