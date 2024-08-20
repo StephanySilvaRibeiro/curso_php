@@ -58,6 +58,9 @@ $resultado = Calculadora($numero1, $operacao, $numero2);
 echo "O resultado de : $numero1 $operacao $numero2 = $resultado";
 echo "<br>";
 echo "<br>";
+echo "------------------------------------------------------------------------------";
+echo "<br>";
+echo "<br>";
 
 //------------------------------------------------------------------------------
 
@@ -65,40 +68,40 @@ echo "<br>";
 // Crie um sistema bancario contendo as seguintes operações:
 // Deposito, Saque, Extrato (saldo).
 
-function Banco($valor, $operacao, $saldoAtual){
+echo "SISTEMA BANCÁRIO";
+echo "<br>";
+echo "<br>";
 
-    $valor = 0;
-    $saldo = $saldoAtual;
+function Banco($valor, $operacao){
+
+    $saldoAtual = 200;
 
     if ($operacao == "Deposito"){
 
-        $valor += $valor;
+        $saldoAtual = $saldoAtual + $valor;
 
-        return $valor;
+        return $saldoAtual;
     }
 
     if ($operacao == "Saque"){
 
-        $valor -= $valor;
+        $saldoAtual = $saldoAtual - $valor;
 
-        return $valor;
+        return $saldoAtual;
     }
 
     if ($operacao == "Extrato"){
 
-        return $valor;
+        return $saldoAtual;
+        
     }
 }
 
-$saldoAtual = 50;
-$valor = 100;
-$operacao = "Deposito";
+$valor = 2000;
+$operacao = "Extrato";
 
-$saldoAtual = Banco($valor1, $operacao, $saldoAtual);
-echo "Extrato: $valor $operacao = $saldoAtual <br>";
 
-$operacao = "saque";
-$saldoAtual = Banco($valor1, $operacao, $saldoAtual);
-echo "Extrato: $valor $operacao = $saldoAtual <br>";
+$saldoAtual = Banco($valor, $operacao);
 
+echo "SEU SALDO ATUAL É: $saldoAtual <br> OPERAÇÃO REALIZADA: $operacao <br>";
 
