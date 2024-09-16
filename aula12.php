@@ -2,15 +2,13 @@
 
 class FormatarDados {
 
-    // Propriedades || atributos
-
+    // Propriedades || atributos (variaveis da classe|objeto)
     public $texto;
     public $mascara;
 
     public function __construct($texto, $mascara)
     {
-        $padrao = "/[^0-9]/is";
-        $this->texto = preg_replace($padrao, "", $texto);
+        $this->texto = $texto;
         $this->mascara = $mascara;
     }
 
@@ -27,8 +25,7 @@ class FormatarDados {
         $texto = $texto ? $texto : $this->texto;
         $mascara = $mascara ? $mascara : $this->mascara;
 
-        $a = 0;
-
+        $a =0;
         $valorMascarado = "";
         
         for ($i=0; $i <= strlen($mascara); $i++) {
@@ -45,57 +42,38 @@ class FormatarDados {
         return $valorMascarado;
     }
 
-    public function isValidCel() {
-
-        $padrao = "/[^0-9]/is";
-        $texto = preg_replace($padrao, "", $this->texto);
-    
-        $tamanho = strlen($texto);
-    
-        if ($tamanho != 13) {
-            return false;
-        }
-    
-        $pais = substr($texto, 0, 2); // 55 - 5554999912933
-        $ddd = substr($texto, 2, 2); // 54 - 5554999912933
-    
-        if ($pais != 55) {
-            return false;
-        }
-    
-        // $listDDD = array(11, 12, 13, 14, 54);
-        $listDDD = [11, 12, 13, 14, 54];
-    
-        $dddValido = in_array($ddd, $listDDD); // TRUE || FALSE
-    
-        return $dddValido;
-
 }
 
-    public function isValidCPF() {
+$maskCPF = "###.###.###-##";
+$maskCNPJ = "##.###.###/####-##";
 
-        $padrao = "/[^0-9]/is";
-        $texto = preg_replace($padrao, "", $this->texto);
-
-        return true;
-}
-
-    public function isValidCNPJ() {
-
-        $padrao = "/^[0-9]*$/";
-        $texto = preg_replace($padrao, "", $this->texto);
-
-        return true;
-}
-
-}
-
-$texto = "5500996797757";
+$texto = "5554999912933";
 $mascara = "+## (##) # ####-####";
-
-// ###.###.###-## CPF
-// ##.###.###/####-## CNPJ
-// +## (##) # ####-#### CELULAR
 
 $formatarDados = new FormatarDados($texto, $mascara); // instanciar o objeto
 echo $formatarDados->addMask();
+
+
+
+
+// classe || objeto
+class Somar {
+
+    // Propriedade || atributo
+    public $resultado = 0;
+
+    // funcoes || metodos
+    public function somar($valor = 0, $valor2 = 1 ) {
+        $this->resultado = $valor + $valor2;
+        $this->subtrair();
+    }
+
+    public function subtrair($valor = 0, $valor2 = 1, $resultado = 1) {
+        $this->resultado = $valor - $valor2;
+    }
+}
+
+$resultado = new Somar(); // instancia do objeto Somar
+$resultado->somar(10, 20); // 30
+$resultado->subtrair();
+echo $resultado->resultado;
