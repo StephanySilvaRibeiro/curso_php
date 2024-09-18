@@ -34,24 +34,17 @@ class Calculadora {
 
 $calculadora = new Calculadora();
 
-$calculadora->somar(10, 10);
-echo $calculadora->resultado;
-
-echo "<br/>";
-
-// $calculadora->dividir(10, 10);
+// $calculadora->somar(10, 10);
 // echo $calculadora->resultado;
-echo $calculadora->resultado;
-echo $calculadora;
 
+// echo "<br/>";
 
+// // $calculadora->dividir(10, 10);
+// // echo $calculadora->resultado;
+// echo $calculadora->resultado;
+// echo $calculadora;
 
-
-
-
-
-
-
+//---------------------------------------------------------------------------------
 
 /**
  * Criar uma classe/Objeto que representa um banco
@@ -62,3 +55,82 @@ echo $calculadora;
  */
 
  
+
+
+ class Banco {
+
+    public $saldo = 100;
+    public $erro = ""; 
+
+
+    public function Saque($quantidade){
+
+        if ($quantidade > $this->saldo || $quantidade <= 0){
+
+            $this->erro = "Saldo Insuficiente";
+
+         }else { 
+
+            $this->saldo -= $quantidade;
+
+         }
+
+         return $this->retorno();
+
+    }
+
+    public function Deposito($quantidade){
+
+        if ($quantidade <= 0 || $quantidade == ""){
+
+            $this->erro = "Insira um valor valido";
+
+        } else {
+
+            $this->saldo += $quantidade;
+
+        }
+
+        return $this->retorno();
+    }
+
+    public function Extrato(){
+
+        return  $this->saldo;
+    }
+
+    public function Transferencia($quantidade){
+
+        if ($quantidade > $this->saldo || $quantidade <= 0){
+
+             $this->erro = "Saldo Insuficiente ";
+
+        }else{
+
+            $this->saldo -= $quantidade;
+
+        }
+
+        return $this->retorno(); 
+
+    }
+
+    public function retorno(){
+
+        if ($this->erro != ""){
+
+            return $this->erro;
+        }
+        
+        return "Operação Concluida";
+    }
+
+}
+
+$banco = new Banco();
+echo "<br>";
+echo $banco->Saque(100);
+echo "<br>";
+echo $banco->Deposito(200);
+echo "<br>";
+echo $banco->Transferencia(300);
